@@ -11,7 +11,8 @@ public class IntegerData {
 		System.out.println("Byte 정수의 최소값 : " + Byte.MIN_VALUE);
 		System.out.println("Byte 정수의 최대값 : " + Byte.MAX_VALUE);
 		//Byte 클래스의 필드(특정 값을 저장) : BYTES, MIN_VALUE, MAX_VALUE
-		//	필드는 일반적으로 모두 대문자로 표기합니다.필드는 변하지 않는값(상수)
+		//	필드는 클래스에 속하며
+		//  필드 중에서 변하지 않는값(상수)은 일반적으로 모두 대문자로 표기합니다.
 		
 		System.out.println("::: 2바이트에 저장하는 Short 정수 확인 :::");
 		System.out.println("Short 정수의 크기 : " + Short.BYTES);
