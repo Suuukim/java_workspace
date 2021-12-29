@@ -30,7 +30,7 @@ public class IntegerVarTest {   //정수를 저장하는 변수 연습합니다.
     	//변수의 사용 : 출력/입력, 연산 등
     	n3 = n3 + 100;		//n3 변수의 값이 덧셈 결과 값으로 변경됩니다.
     	
-    	System.out.println("변수 n1 = " + n1);
+    	System.out.println("변수 n1 = " + n1);	// + 는 연결기호 입니다.
     	System.out.println("변수 n2 = " + n2);
     	System.out.println("변수 n3 = " + n3);
     	System.out.println("변수 n4 = " + n4);
