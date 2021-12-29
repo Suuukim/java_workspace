@@ -40,6 +40,13 @@ public class DoubleVarTest {
 //		System.out.println(0/0);   //오류
 		System.out.println(0/3);	//결과 0
 		
+		//정수와 비교할 내용
+		short s1 = 11;
+//		s1 = s1 + s1;    //11+11 결과를 s1 에 저장하려고 한다. 오류
 		
+		float f1 = 1.2f;
+		p1 = p1 + p1;    //정상
+		
+		//데이터 형식의 변환 : 캐스팅이라고 합니다. -> 내일 진도에서 설명하겠습니다.
 	}
 }
