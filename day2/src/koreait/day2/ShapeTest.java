@@ -22,7 +22,7 @@ public class ShapeTest {
 		c_area = radius*radius*3.14;
 		round = 2*radius*3.14;
 		System.out.println("\n[[원 도형의 넓이와 둘레 구하기]]");
-		System.out.printf("반지름 : %.1f cm\n" , radius);   // %d 는 정수데이터 서식 , radius는 double 
+		System.out.printf("반지름 : %.1f cm\n" , radius);   // %d 는 정수데이터 서식 , radius는 double 이므로 %f
 		System.out.printf("둘레를 구했습니다. -> %.3f  ㎠ \n" , c_area);
 		System.out.printf("넓이를 구했습니다. -> %.3f  ㎠ \n", round);
 	}
