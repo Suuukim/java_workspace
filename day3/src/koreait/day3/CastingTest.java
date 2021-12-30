@@ -12,7 +12,8 @@ public class CastingTest {   //데이터의 형식 변환(Type Casting)을 연�
 		float fval1 = 1.23f;
 		fval1 = fval1 + fval1;		// float 으로 연산하기 때문에 정상 실행.
 		
-		sval1 = (short)40000;		//강제 캐스팅 -> 데이터 손실 오류(정확한 값이 아님)
+		sval1 = (short)40000;		//강제 캐스팅 -> 데이터 손실 오류(정확한 값이 아님) , 큰자료형을 작은자료형으로 변환
+		System.out.println("sval1 변수값 = " + sval1);		
 		sval1 = (short)(sval1 + sval1);  //덧셈 결과를 강제로 캐스팅
 	}
 
