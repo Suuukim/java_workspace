@@ -21,4 +21,6 @@ day3 프로그래밍 순서
 
 
 4. BooleanTest.java      
-5. ifTest.java                  
+5. IfTest.java
+6. ElseIfTest.java
+7. LogicalOPTest.java                  
