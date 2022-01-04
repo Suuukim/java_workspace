@@ -30,13 +30,15 @@ public class MathExamV2 {
 			System.out.print("✏  값 2 을 입력하세요. ->  ");
 			n2=sc.nextInt();
 			if(sel==1) {
-				op='+'; result=n1+n2; 
+				op='+';  
+				result=n1+n2; 
 			}
 			if(sel==2) {
-				op='-'; result=n1-n2; 
+				op='-';  
+				result=n1-n2; 
 			}
 			if(sel==3) {
-				op='*'; result=n1*n2; 
+				op='x'; result=n1*n2; 
 			}
 			
 			System.out.print("정답  : "+n1 +op+n2+"=" + result +" 입니다.\n\n");

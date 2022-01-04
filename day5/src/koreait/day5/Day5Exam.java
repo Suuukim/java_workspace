@@ -28,7 +28,8 @@ public class Day5Exam {  //오늘의 복습문제 구현합니다.
 		boolean isUseless=false;
 		
 		for(int i=0;i<password.length();i++) {   // password가 "jungBo@#23"일때 length()메소드는 10을 반환
-		//	System.out.println(password.charAt(i));				//i<10 조건으로 반복
+		//	
+			//i<10 조건으로 반복
 			char temp = password.charAt(i);						//i는 0부터 9까지
 
 			if(temp >='A' && temp <='Z') 
