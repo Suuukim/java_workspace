@@ -23,7 +23,7 @@ public class CharacterTest {  //언어별로 사용하는 문자는 컴퓨터로
 		ch3='힣';
 		ch4='\ud7a3';
 		ch5=55203;
-		System.out.println("ch3=" + ch3);
+		System.out.println("ch3=" + ch3); 
 		System.out.println("ch4=" + ch4);
 		System.out.println("ch5=" + ch5);
 		
