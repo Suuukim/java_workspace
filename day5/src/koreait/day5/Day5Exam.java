@@ -65,7 +65,8 @@ public class Day5Exam {  //오늘의 복습문제 구현합니다.
 		if(numeric_cnt < 1)
 			message += "\n*) 숫자 1개 이상 포함해야 합니다.";   //+ 문자열 연결
 			//isOk=false;
-		if(symbol_cnt < 1)	
+		//if(!isUseless && symbol_cnt < 1)
+		if(symbol_cnt < 1)
 			message += "\n*) 기호 1개 이상 포함해야 합니다.";   //+ 문자열 연결
 			//isOk=false;
 		
