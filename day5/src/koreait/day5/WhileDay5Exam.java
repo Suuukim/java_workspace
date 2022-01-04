@@ -21,6 +21,8 @@ public class WhileDay5Exam {  //Day5Exam.java 를 반복실행-> isOk가 true일
 				lower_cnt=0 ; 
 				numeric_cnt=0;
 				symbol_cnt=0;
+				message="";
+				
 				System.out.print("사용할 패스워드 입력하세요. -> ");
 				
 				password = sc.next();

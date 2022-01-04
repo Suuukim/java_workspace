@@ -28,6 +28,21 @@ public class WhileTest {
 			if(j==100) break;			//탈출
 		}
 		
+		System.out.println("\n while 출력3");
+		boolean isOk=true;
+		while(isOk) {
+			System.out.println("j=" + j);
+			for(int i=0;i<5;i++)
+				System.out.print("\t"+i);
+		
+			System.out.println();
+			
+			j++;
+			if(j==105) isOk=false;		//while 종료
+		
+		}
+		
+		
 	}
 
 }
