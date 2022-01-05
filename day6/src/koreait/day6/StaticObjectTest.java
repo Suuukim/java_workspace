@@ -5,6 +5,7 @@ public class StaticObjectTest {   //VariableTest 클래스의 필드 성질을 �
 	public static void main(String[] args) {
 
 		System.out.println(VariableTest.fval2);		//1번
+		VariableTest.methodA(23);
 		
 		VariableTest obj = new VariableTest();	//obj 는 객체를 참조하는 변수
 		System.out.println(obj.dval);		//2번
