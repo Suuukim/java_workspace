@@ -11,6 +11,8 @@ public class VariableTest {
 	static final int fval2 = 456;		//값을 변경할 수 없는 변수 : 상수
 //	final int test;		// final 변수는 꼭 초기값을 저장합니다.
 	int test2;
+	
+	
 	public static void main(String[] args) {
 
 		int sum=100;
