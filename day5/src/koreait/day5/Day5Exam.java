@@ -38,7 +38,6 @@ public class Day5Exam {  //오늘의 복습문제 구현합니다.
 				lower_cnt++; //소문자 개수증가
 			else if(temp >= '0' && temp <='9')
 				numeric_cnt++; //숫자 개수(count) 증가
-			
 			else if (temp>=32 && temp <=47 || temp>=58 && temp <=64 
 					|| temp>=91 && temp <=96 || temp>=123 && temp <=126) {
 					//추가요구사항 처리
