@@ -21,7 +21,7 @@ public class CypherTest {
 		message = sc.nextLine();
 		
 		//**message를 temp로 변환하여 참조합니다.
-		temp = message.toCharArray();    
+		temp = message.toCharArray();    //리턴된 char[] 배열의 주소값을 temp저장합니다.
 		
 		//문자하나+key 결과값은 temp 배열에 저장합니다.
 		for(int i=0;i<temp.length;i++) {
