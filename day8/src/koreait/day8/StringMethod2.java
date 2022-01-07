@@ -57,6 +57,7 @@ public class StringMethod2 {
 		String find = "브라질";
 		while(true) {
 			idx = temp.indexOf(find);
+			System.out.println("찾은 idx : " + idx);
 			if(idx == -1) break;
 			cnt++;
 			temp = temp.substring(idx+find.length()); 	//치킨은 length 가 2 -> 첫번째 치킨 뒤부터 문자열 추출.
