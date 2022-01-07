@@ -6,7 +6,7 @@ import java.util.Random;
 public class LottoTest {
 
 	public static void main(String[] args) {
-		// 난수 1~46 범위의 값을 중복된 값이 없도록 6개 생성하고 배열에 저장합니다.
+		// 난수 1~45 범위의 값을 중복된 값이 없도록 6개 생성하고 배열에 저장합니다.
 		
 		int[] lotto = new int[6];
 		Random r1 = new Random();
@@ -16,8 +16,8 @@ public class LottoTest {
 			int temp=0;
 			isOk = true;		//새로운 i인덱스 로 검사할 때 초기화
 			
-			while(isOk) {
-				temp = r1.nextInt(46)+1;	//1~46;
+			while(isOk) {         //다른방법 : isOk 변수 없이 while(true)
+				temp = r1.nextInt(45)+1;	//1~46;
 				System.out.println("만든값 :" + temp);
 				int j;
 			
@@ -34,7 +34,8 @@ public class LottoTest {
 						
 					}	
 				}	//for - j end
-				if(j==i) isOk=false;		//**비교하는 동안 같은 값이 없을때 입니다.
+				if(j==i)   //**비교하는 동안 같은 값이 없을때 입니다.
+					isOk=false;		//다른 방법 : isOk 변수 안쓸때는 break; 로 합니다.
 				
 			} //while end	
 			
