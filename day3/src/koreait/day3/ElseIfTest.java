@@ -26,7 +26,7 @@ public class ElseIfTest {
 		if(point >= 150)
 			System.out.println("🍎🍎🍎🍎🍎 사과 선물세트");
 		else if(point >=100)  //150보다 작은경우에 두번째 조건식 검사
-			System.out.println("🍊🍊🍊🍊🍊🍊 귤 선물세트");
+			System.out.println("🍊🍊🍊🍊🍊🍊 귤 선물세트");    //100~149
 		else if(point >=50)  // 100보다 작은 경우 세번째 조건식 검사
 			System.out.println("🍩🍪🍭 과자 선물세트");
 		else  // 50보다 작은 모든 값
