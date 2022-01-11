@@ -52,7 +52,9 @@ public class ObjectArgMethod {
 		double[] darr = new double[10];
 		
 		for(int i=0;i<darr.length;i++) {
-			darr[i] = r.nextDouble();
+//			darr[i] = r.nextDouble();		//0~1 사이의 실수
+//			darr[i] = r.nextDouble()*10;		//0~10 사이의 실수
+			darr[i] = r.nextDouble()*9+1;		//0~9 사이의 실수 +1 -> 1~10 사이의 실수
 			
 		}
 		
