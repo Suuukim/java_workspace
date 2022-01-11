@@ -26,8 +26,9 @@ public class StringArrayTest {
 		//String 은 클래스, 문자열은 객체 -> names 배열의 주소, names[i]는 문자열 주소 - 둘다 참조(주소)값을 저장합니다.
 		
 //		System.out.println("charAt(0) : " + names[0].charAt(0)  + 
-//				",subString(2,5) : " + names[0].substring(2, 5));		//문자열이 null 일때 charAt 등 메소드 실행은 오류 발생.
-											//-> 오류의 명칭(원인)은 NullPointerException 
+//				",subString(2,5) : " + names[0].substring(2, 5));		
+								//문자열이 null 일때 charAt 등 메소드 실행은 오류 발생.
+								//-> 오류의 명칭(원인)은 NullPointerException 
 	
 		Scanner sc = new Scanner(System.in);		//키보드 입력 준비
 		for(int i=0;i<names.length;i++) {
@@ -51,6 +52,8 @@ public class StringArrayTest {
 			names[i]=names[i].toUpperCase();		//names 배열 요소들이 참조하던 주소가 변경됩니다.
 		
 		System.out.println(Arrays.toString(names));
+		
+				
 	}
 
 }
