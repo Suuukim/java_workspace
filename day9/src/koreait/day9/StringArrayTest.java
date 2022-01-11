@@ -1,5 +1,6 @@
 package koreait.day9;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class StringArrayTest {
@@ -38,8 +39,18 @@ public class StringArrayTest {
 		for(int i=0;i<names.length;i++)
 			System.out.println("i=" + i + ",이름 =" + names[i]);
 		
+		
 		System.out.println("charAt(0) : " + names[0].charAt(0)  + ",subString(2,5) : " + names[0].substring(2, 5));
 		
+		for(int i=0;i<names.length;i++)
+			System.out.println("charAt(0) : " + names[i].charAt(0)  +
+					",subString(2,5) : " + names[i].substring(2, 5));
+			
+		//names 배열의 영문자를 모두 대문자로 변환하여 names 배열 요소로 참조(지정)하도록 합니다.
+		for(int i=0 ; i<names.length ;i++)
+			names[i]=names[i].toUpperCase();		//names 배열 요소들이 참조하던 주소가 변경됩니다.
+		
+		System.out.println(Arrays.toString(names));
 	}
 
 }
