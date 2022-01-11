@@ -26,7 +26,7 @@
 
 6.연산의 종류 : 산술, 관계 ,논리 연산   (관계/논리연산결과는 참또는 거짓->if,반복문 조건식.데이터 타입 boolean 이해필요합니다.) 
 
-7.if~   /if ~ else~  /if~else if~ ... 조건문  *switch 문의 형식  *간단한 if문은 ? (조건 연산자, 3항연산)
+7.if~   /if ~ else~  /if~else if~ ... 조건문  *switch 문의 형식  *간단한 if문은 ? 조건 연산자 (3항연산)
 for , while 반복문  *반복문의 중첩 (이중/삼중 for문, for안에 while 예제)
 
 
