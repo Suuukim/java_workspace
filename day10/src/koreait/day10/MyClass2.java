@@ -6,10 +6,11 @@ public class MyClass2 {
 	String name;				//default(package)  : 다른 패키지에서 사용 못합니다. 이웃이면 같이쓰자.
 	public int score;			//public   : 어디서나 사용합니다.공공의,공용의... 다같이 쓰자.
 	
-	//생성자 메소드 : public,default 에 따라 접근권한 설정할수 있습니다. 기본 접근권한 public 
+	//생성자 메소드 : public,default 에 따라 접근권한 설정할수 있습니다. 
+	// (자동으로 숨어있는) 기본생성자메소드 접근권한 public 
 /*
 	MyClass2() {
 		// 이렇게 수정하면 다른 패키지에서 객체 생성을 못합니다.
 	}
-*/	
+*/
 }
