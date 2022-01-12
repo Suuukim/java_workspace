@@ -5,9 +5,10 @@ public class MyClass1 {
 //	-> 생성자 메소드 실행으로 객체가 만들어집니다. 	
 //  -> 기본생성자 : 인자가 없는 형식의 생성자
 //  -> 커스텀생성자 : 필드값 초기화를 위해서 인자가 있는 형식의 생성자	
-	int f1;
+	int f1;			//default 접근권한
 	String f2;
 	double[] f3;
+	public String f4;		//public 접근권한
 	
 	public MyClass1() {
 	//커스텀생성자를 정의하면 기본생성자는 생략을 할 수 없습니다.-> 필요하다면 기본생성자 정의가 필요합니다.
@@ -34,7 +35,7 @@ public class MyClass1 {
 	}
 	
 	
-	void print() {
+	void print() {		//default 접근권한
 		System.out.println("f1 = " + f1 + ",f2 = " + f2 + ",f3 = " + f3);
 	}
 	
