@@ -40,9 +40,10 @@ public class NumberGame {
 			this.count = count;
 		}
 		
-		public boolean isSuccess() {
+		public boolean isSuccess() {	//타입이 boolean 일때 isXXX (getXXX 아닙니다.)
 			return isSuccess;
 		}
+		
 		public void setSuccess(boolean isSuccess) {
 			this.isSuccess = isSuccess;
 		}
