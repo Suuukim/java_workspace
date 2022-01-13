@@ -8,6 +8,8 @@ public class Shape {		//상위클래스 -> 상속받은 클래스는 Triangle, S
 	private String shapeName;		//도형이름
 	private int width;			//도형의 크기 중 너비
 	private int height;			//          높이
+	String etc="연습용";		//기타 정보 - 기본접근자 (패키자 같은 클래스에 사용할수 있습니다.)
+	protected int count=12;		//자식클래스이면 어느 패키지 이던지 사용할 수 있다.
 	
 	//필드 초기화 생성자 : 필드값은 생성자로만 초기화합니다. (예시 : 요구조건은 초기화된 필드값은 변경 X)
 	public Shape(String shapeName, int width, int height) {

@@ -1,0 +1,18 @@
+day11 순서
+
+1. MyRedPen.java -> 어제 복습문제 day10 프로젝트에 있습니다.
+2. 클래스 상속관계에서 생성자 : ClassA.java  , ClassB.java , ClassC.java  부모클래스
+                      ClassAA.java , ClassBB.java  , ClassCC.java  자식 클래스
+3. 상속관계 연습 : Shape.java  , Triangle.java , Square.java
+4. 상속관계 접근자 : protected 
+   koreait.day11a 패키지
+                         
+5. 오늘의 문제 : 상속 연습
+
+1) Animal.java   : 필드 color, name (private 접근자)
+2)               : getter,setter 메소드
+3)               : 생성자는 기본생성자에서 "새로운 반려동물 가족이 생겼습니다."   출력하기 입니다.
+4)               : 메소드는 void sound()  "소리를 내는 동물입니다." 출력
+5) Puppy.java    : 필드 type (문자열,private) , getter/setter 메소드
+6)               : 메소드 sound() 재정의  "🐶" 동물모양 이모지 출력
+

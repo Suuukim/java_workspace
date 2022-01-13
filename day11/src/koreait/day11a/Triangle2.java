@@ -1,8 +1,10 @@
-package koreait.day11;
+package koreait.day11a;
 
-public class Triangle extends Shape {
+import koreait.day11.Shape;
+
+public class Triangle2 extends Shape {
 	
-	public Triangle(String shapeName, int width,int height) {
+	public Triangle2(String shapeName, int width,int height) {
 
 		super(shapeName,width,height);
 	}
@@ -11,8 +13,8 @@ public class Triangle extends Shape {
 		System.out.println("도형이름 : " + getShapeName() 
 		+ ",너비 : " + getWidth() + ",높이 : " + getHeight());
 		System.out.println("특별한 변수 테스트 -(Triangle 메소드에서 출력)-----------------?");
-		System.out.println("기타정보 : " + etc);  //private 이 아닌 부모 필드는 직접 접근합니다.(super.etc) 
-		System.out.println("count : " + count);
+//		System.out.println("기타정보 : " + etc);  //다른패키지 클래스의 기본접근자 필드는 사용 못합니다. 
+		System.out.println("count : " + count);  //다른패키지 클래스이지만 자식클래스이므로 사용합니다.
 	}
 	
 	public int getArea() {   //***** 부모클래스가 정의한 같은 형식의 메소드를 수정(변경)합니다. : 오버라이드*****
