@@ -12,6 +12,9 @@ public class ClassBB extends ClassB{
 	*/
 	public ClassBB(int ab) {
 		super(ab);  //부모클래스의 생성자 호출
+		
+		//super(ab); 가 없으면 오류 -> 자동으로 super(); 를 호출합니다.
+		//super.ab=ab;    //부모클래스에 기본생성자 있을때 가능.
 	}
 	
 	//this : 현재 자신의 객체

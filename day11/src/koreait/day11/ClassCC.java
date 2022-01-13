@@ -5,11 +5,11 @@ public class ClassCC extends ClassC{
 
 /*	
 	public ClassCC(int c) {
-		super(c);	//부모클래스의 생성자 호출 : 오류
+		super(c);	//부모클래스의 생성자 호출 : 없는 형식이므로 오류
 	}
 */	
 	public ClassCC(int cc) {
-		this.cc = cc;
+		this.cc = cc;		//현재 자식 클래스의 필드를 다루는것은 가능
 	}
 }
 
