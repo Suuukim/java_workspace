@@ -18,11 +18,11 @@ public class NumberGame {
 			System.out.println("gamer : " + gamer + ", 시도횟수 : " + count + ",성공 : " + isSuccess);
 		}
 		
-		//static
-		public int makeNumber(int min, int max) {	//101~299
+		//static - 클래스의 인스턴스 필드값을 사용하지 않는 경우.
+		public static int makeNumber(int min, int max) {	//101~299 : 난수의 최소값,최대값 인자로 받고 난수 반환
 			Random r = new Random();
-			return r.nextInt(max-min+1)+min;    //r.nextInt(199)+101;
-		}
+			return r.nextInt(max-min+1)+min;    //r.nextInt(199)+101;  -> 0~198 + 101
+		}// r.nextInt(100) : 0~99
 
 
 		//getter 와 setter

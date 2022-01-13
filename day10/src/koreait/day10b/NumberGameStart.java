@@ -16,11 +16,11 @@ public class NumberGameStart {
 		String gamer = sc.nextLine();
 		
 		do {
-			NumberGame ng = new NumberGame(gamer);
-			int[] numbers = new int[10];
+			NumberGame ng = new NumberGame(gamer);		//게임기록을 저장하는 클래스
+			int[] numbers = new int[10];		//사용자 시도 숫자값 저장 배열(최대 10개)
 			
 			System.out.println("이제 시작합니다. 나 컴퓨터는 숫자를 결정했습니다.");
-			int random = ng.makeNumber(101, 200);	//숫자의 범위 101~200
+			int random = NumberGame.makeNumber(101, 200);	//숫자의 범위 101~200 -> 최소값,최대값 인자로 전달
 			
 			System.out.println("너 휴먼 맞춰보세요.(101~200) ");
 			int i = 0;		//numbers 배열(-사용자 입력숫자 저장)의  인덱스
@@ -58,6 +58,7 @@ public class NumberGameStart {
 			
 			result[k]=ng;
 			k++;		//게임 기록 저장 result 배열 인덱스 증가
+			if(k==5) break;
 			System.out.print("게임을 계속 하시겠습니까? 계속하려면 0 입력하세요. -> ");
 		}while(sc.nextInt()==0);
 		//게임기록 result 배열 값 출력.
