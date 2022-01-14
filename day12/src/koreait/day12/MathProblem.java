@@ -6,7 +6,17 @@ public class MathProblem {
 	private int n1;
 	private int n2;
 	private char op; // 연산자 + , - ,x ,÷
+	//추가*
+	private boolean isCorrect;
 
+	public void setCorrect(boolean isCorrect) {
+		this.isCorrect = isCorrect;
+	}
+	
+	public boolean isCorrect() {	//getter
+		return isCorrect;
+	}
+	//*여기까지
 	public MathProblem(char op) {
 		this.op = op;
 	}
