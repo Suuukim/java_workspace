@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class MyRedPenV3 {
 
 	public static void main(String[] args) {
-		ArrayList<MathProblem> addList = new ArrayList<>();
+		ArrayList<MathProblem> addList = new ArrayList<>();  //이것을 어떻게 바꾸어야하는가?
 		Scanner sc = new Scanner(System.in);
 		int ans;
 		int cnt=0;	//맞은갯수 카운트
