@@ -27,3 +27,14 @@ Korean -> ...사과..
 {apple:사과 , milk:우유 }
 
 <<정리>> 데이터를 저장하기 위해서  기본형 변수 -> 배열 -> 클래스의 필드(객체생성) -> ArrayList -> HashMap 순서로 연습했습니다.
+
+
+5. 추상클래스 연습  : review 패키지는 day11 프로젝트와 동일합니다.(복습용)
+
+1)AShape.java
+2)ATriangle.java
+3)ASquare.java
+4)AbstractTest.java
+5)AbstractTest2.java
+
+
