@@ -39,7 +39,7 @@ public class AnimalCommunity {
 //		System.out.println("분양가능한지 확인 :" + sana.isAdopt(animals[3]));
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.print("분양을 원하는 아이의 숫자를 선택해 주세요. ->");
+		System.out.print("분양을 원하는 아이의 숫자를 선택해 주세요. ->"); 
 		int sel = sc.nextInt();
 		
 		System.out.print("선택하신 " + animals[sel] + "는 ");
