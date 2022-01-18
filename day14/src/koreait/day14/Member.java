@@ -6,9 +6,9 @@ public class Member {
 	private int age;
 	
 	public Member(String name,int age) {
-		System.out.println("새로운 회원님 환영합니다.");
 		this.name=name;
 		this.age= age;
+		System.out.println("새로운 회원 <"+this.name+"> 님 환영합니다.");
 	}
 	
 	//회원이 분양받습니다. 회원나이 강아지는 15세 이상, 고양이는 18세이상, 토끼는 13세이상 분양 받을 수 있다.(처리조건)
@@ -22,6 +22,8 @@ public class Member {
 			return false;
 		
 	}
+	
+	
 	
 	//getter
 	public int getAge() {

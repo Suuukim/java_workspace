@@ -19,6 +19,6 @@ public class Rabbit extends Animal{
 	
 	@Override
 	public String toString() {
-		return super.toString() + " - Type: " + TYPE;   //super는 Animal 클래스 toString
+		return super.toString() +  TYPE;   //super는 Animal 클래스 toString
 	}
 }

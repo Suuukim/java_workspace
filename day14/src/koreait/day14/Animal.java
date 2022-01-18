@@ -1,7 +1,11 @@
 package koreait.day14;
 
-public abstract class Animal { //abstract 클래스는 abstract 메소드를 갖는것이 일반적입니다.
-							 //abstract 메소드 有無와 상관없이 객체는 직접 생성 못합니다.
+public abstract class Animal { 
+						//abstract 메소드 有無와 상관없이 객체는 직접 생성 못합니다.(구체화 되지않은 상태이다.)
+						//abstract 클래스는 abstract 메소드를 갖는것이 일반적입니다.
+						//               -> 추상메소드를 자식클래스가 구현하면 구체화 됩니다.	
+	static final String TYPE ="아직 모름";
+	
 	//필드 : 공통적인 값
 	private String name;
 	private String color;
@@ -28,8 +32,11 @@ public abstract class Animal { //abstract 클래스는 abstract 메소드를 갖
 	//Object 클래스의 toString() 메소드 오버라이드
 	@Override
 	public String toString() {
-		return "Animal [name=" + name + ", color=" + color + "]";
+		return "Animal [name=" + name + ", color=" + color + "] - Type : ";
+		//TYPE 필드값을 여기서 출력하면 이 코드가 있는 Animal의 TYPE이 출력됩니다.
+		//자식클래스의 TYPE필드값을 출력 안합니다.결론 TYPE 필드는 각각 자식클래스 toString 에서 출력합니다.
 	}
+	
 	
 	//getter,setter
 	public String getName() {
