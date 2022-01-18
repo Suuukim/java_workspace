@@ -25,6 +25,11 @@ public class Member {
 	
 	
 	
+	@Override
+	public String toString() {
+		return "(name=" + name + ", age=" + age + ")";
+	}
+
 	//getter
 	public int getAge() {
 		return age;

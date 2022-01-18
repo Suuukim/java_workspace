@@ -62,7 +62,7 @@ public class ObjectArgMethod {
 		System.out.println(Arrays.toString(darr));	//실수 배열을 인자로 합니다.
 		
 		//메소드 오버로딩(overloading) - 메소드 이름은 같으나  인자 형식이 다릅니다.
-		//  						- 반환값은 같은 형식.
+		//  						- 반환값은 같거나 다른 타입 형식도 가능합니다.
 		//			대표적인 메소드 - Arrays.toString() 메소드 입니다.
 		
 	}
