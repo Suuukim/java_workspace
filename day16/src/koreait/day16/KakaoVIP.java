@@ -1,5 +1,7 @@
 package koreait.day16;
 
+import java.text.DecimalFormat;
+
 public class KakaoVIP extends CreditCard{
 	
 	public static final int MAX_LIMIT = 20000000;   
@@ -25,9 +27,19 @@ public class KakaoVIP extends CreditCard{
 	
 	@Override
 	public int pay(int money) {
-		payTotal+=money;				//추가 현재이용금액+money가 limit 보다 크다면 
-										//자동으로 한도 5000000 증가
+		if(payTotal+money>limit) {		//money를 포함한 총 사용금액이 limit를 초과한면
+			upLimit(5000000);			//자동으로 한도 5000000 증가
+		}
+		payTotal+=money;				//
 		this.point+=money*0.01;			//VIP카드는 포인트가 있고 포인트 사용금액 0.1%
 		return money;
+	}
+	
+
+	@Override
+	public String toString() { //4)
+		DecimalFormat df = new DecimalFormat("###,###,### 원");   //정수 또는 실수 값 출력패턴을 설정하는 클래스입니다.
+		return owner + " 님. 이번 달 결제 예정 금액 " + df.format(payTotal) 
+				+" 입니다.\n[이용한도 " + df.format(limit) + " , 포인트 : " + point + " ]";
 	}
 }
