@@ -1,6 +1,6 @@
 package koreait.day17;
 
-public class Member {
+public class Member {   //Member 타입은 비교가능한 객체가 아닙니다. -> sort할때 Comparator (비교자) 인자로 전달해야 합니다.
 	
 	private String name;
 	private int age;

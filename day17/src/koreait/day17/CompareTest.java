@@ -37,16 +37,20 @@ public class CompareTest {
 		list3.add(new Member("사나",23));			//23   15  29   33   12
 		list3.add(new Member("가나",15));
 		list3.add(new Member("나나",29));
-		list3.add(new Member("미나",33));
+		list3.add(new Member("미나",23));
 		list3.add(new Member("쯔위",12));
+		list3.add(new Member("다나",23));
 		
 		System.out.println("sort 이전 : " + list3);
-	//	list3.sort(null);
-		list3.sort(new MemberAscending());
+	//	list3.sort(null);		//오류 : 비교가능한 객체가 아닙니다.
+		list3.sort(new MemberAgeAscending());
 		System.out.println("sort 이후(나이 오름차순) : " + list3);
-		list3.sort(new MemberDescending());
+		list3.sort(new MemberAgeDescending());
 		System.out.println("sort 이후(나이 내림차순) : " + list3);
-		
+		list3.sort(new MemberNameAscending());
+		System.out.println("sort 이후(이름 오름차순) : " + list3);
+		list3.sort(new MemberNameDescending());
+		System.out.println("sort 이후(이름 내림차순) : " + list3);
 	}
 
 }

@@ -2,7 +2,7 @@ package koreait.day17;
 
 import java.util.Comparator;
 
-public class MemberDescending implements Comparator<Member>{
+public class MemberAgeDescending implements Comparator<Member>{
 //Member 클래스의 비교기준을 설정합니다. 나이 내림차순으로 결정합니다.
 	
 	@Override
