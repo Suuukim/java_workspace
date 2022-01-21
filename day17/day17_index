@@ -9,3 +9,11 @@ day17 순서
 스마트TV
 맥북
 :
+
+
+소스 순서 : RemoteControl.java
+		 WebSearch.java
+		 SmartTV.java
+		 SmartMachine.java (SmartTV 와 똑같고 연습용입니다.)
+		 MackBook.java (SmartMachine 상속 클래스)
+		 Day17App1.java(애플리케이션 클래스입니다.)

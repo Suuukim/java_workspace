@@ -43,7 +43,7 @@ public class SmartTV implements RemoteControl, WebSearch {
 //			this.power=false;
 			System.out.println("전원을 끕니다."); 
 		}else {
-			this.power = true;
+//			this.power = true;
 			System.out.println("전원을 켭니다.");
 		}
 		this.power = !this.power;

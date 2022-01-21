@@ -61,6 +61,12 @@ public class SmartMachine implements RemoteControl, WebSearch {
 	public boolean isPower() {
 		return power;
 	}
+	
+
+	@Override
+	public void setBattery() {
+		System.out.println("기계 종류에 따라 다릅니다.");
+	}
 
 }
 
