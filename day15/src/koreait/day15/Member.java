@@ -15,5 +15,4 @@ public class Member {
 		return "name:" + name + ", age:" + age ;
 	}
 
-	
 }
