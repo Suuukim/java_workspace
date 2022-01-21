@@ -15,7 +15,8 @@ public class TryCatchTest2 {
 				for(int i=0;i<menu.length;i++)
 					System.out.println("["+(i+1) +"]" + menu[i]);
 				System.out.print("주문할 음식을 선택하세요 -> ");
-				sel = Integer.parseInt(sc.nextLine());
+				sel = Integer.parseInt(sc.nextLine());	//지금부터는 정수값 입력은 이렇게 하세요.
+												//nextInt() 의 엔터문제가 해결됩니다.
 				System.out.println("주문을 완료했습니다. 당신의 주문 음식은 " + menu[sel-1]+" 입니다.");
 				run=false;  //break;
 			}catch (NumberFormatException e1) {
