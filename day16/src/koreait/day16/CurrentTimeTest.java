@@ -22,8 +22,8 @@ public class CurrentTimeTest {
 		long t1 = 24L*60L*60L*1000L;
 		long t2 = 365L*24L*60L*60L*1000L;
 		
-		System.out.println("1일은 " + df.format(t1) + " ms 입니다.");
-		System.out.println("1년은 " + df.format(t2) + " ms 입니다.");
+		System.out.println("1일은 " + String.format("%15s", df.format(t1)) + " ms 입니다.");
+		System.out.println("1년은 " + String.format("%15s", df.format(t2)) + " ms 입니다.");
 	}
 
 }
