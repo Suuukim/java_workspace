@@ -1,5 +1,7 @@
 package koreait.day18;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.StringTokenizer;
 
 public class StringTokenTest {
@@ -28,6 +30,30 @@ public class StringTokenTest {
 					Integer.parseInt(stk.nextToken()));
 			System.out.println(stu);
 		}
+		// \t\n\r\f : 공백 ,탭 , 줄바꿈  (-> 잘안쓰는 기호 : carriage return(커서를 맨앞으로) , form feed)
+		// 공백 ,탭 , 줄바꿈 는 기본적이 구분 기호입니다.
+		System.out.println(":::: 객체를 여러개 만드는 예시 ::::");
+		temp = "모모 90 88 79\n나나 92 83 91\t다현 80 87 84";
+		stk = new StringTokenizer(temp);
+//ArrayList에서 여러 객체를 참조하도록 추가해보세요.		
+		List<StudentScore> stus = new ArrayList<>();
+		while(stk.hasMoreTokens()) {
+			//System.out.println(stk.nextToken());
+			StudentScore stu = new StudentScore(stk.nextToken(), 
+					Integer.parseInt(stk.nextToken()), 
+					Integer.parseInt(stk.nextToken()), 
+					Integer.parseInt(stk.nextToken()));
+			stus.add(stu);
+			System.out.println(stu);
+		}
+		
+		System.out.println("List : " + stus);
+		
+		
+		
+		
+		
+		
 
 	}
 
