@@ -12,6 +12,14 @@ public class StudentScore {
 		this.english = english;
 		this.science = science;
 	}
+	
+	//StringTokenizer 예제용 생성자
+	public StudentScore(String name, int korean, int english, int science) {
+		this.name=name;
+		this.korean = korean;
+		this.english = english;
+		this.science = science;
+	}
 
 	//문제 1) toString 메소드 재정의 하세요. (참고:실행화면)
 	@Override
