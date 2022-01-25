@@ -9,3 +9,7 @@ day19 인덱스
    
 2. 익명클래스(Anonymous , 이름이 없는)  
    - 인터페이스 구현클래스를 별도 파일로 만들지 않고 필요할 때 클래스를 정의하고 객체 생성하는 방법입니다. 
+   RemoteControl.java, WebSearch.java , Animal.java  - 이전 프로젝트 추상클래스와 인터페이스
+   AnonymousTest.java - 익명클래스
+   FuncInterfaceA.java - 함수형 인터페이스,람다식
+   FunctionalInterfaceTest.java - 함수형 인터페이스,람다식
