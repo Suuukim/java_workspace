@@ -1,5 +1,6 @@
 package koreait.day18;
 
+import java.awt.FileDialog;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -9,19 +10,22 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
+import javax.swing.JFrame;
+
 public class MyDictionaryApp { // 애플리케이션 클래스(main 메소드를 응용프로그램 실행을 시작합니다.)
 	// 전역변수 선언.
 	static Scanner sc = new Scanner(System.in);
 	static List<Word> mywords = new ArrayList<>();		//단어들의 목록 (단어장)
 
 	public static void main(String[] args) {
-
+		JFrame f = new JFrame();		//파일대화상자 사용을 위한 객체생성
+		FileDialog fd;
 		boolean run = true;
 		while (run) {
 			System.out.println("선택 기능 👉   1. 단어추가     2. 단어장보기   3. 파일에 저장   4.파일에서 불러오기  5.프로그램 끝내기");
 			System.out.print("선택 -> ");
 			String sel = sc.nextLine();
-			String filename="D:\\dev\\test\\mydict.txt";
+			String filename;  //="D:\\dev\\test\\mydict.txt";
 			switch (sel) {
 			case "1":
 				wordAdd();
@@ -30,9 +34,15 @@ public class MyDictionaryApp { // 애플리케이션 클래스(main 메소드를
 				wordList();
 				break;
 			case "3":
+				fd = new FileDialog(f, "파일 저장",FileDialog.SAVE);
+				fd.setVisible(true);
+				filename = fd.getDirectory() + fd.getFile();
 				wordSave(filename);
 				break;
 			case "4":
+				fd = new FileDialog(f, "파일 열기",FileDialog.LOAD);
+				fd.setVisible(true);
+				filename = fd.getDirectory() + fd.getFile();
 				wordRead(filename);
 				break;
 			case "5":
@@ -115,6 +125,7 @@ public class MyDictionaryApp { // 애플리케이션 클래스(main 메소드를
 					//System.out.println(stk.nextToken(":["));  //테스트2
 					Word w = new Word(stk.nextToken());		//첫번째 토큰을 english 필드값 저장
 					List<String> kor = Arrays.asList(stk.nextToken().split(", "));  //split 결과 타입은 배열을 리스트로 변환
+					kor = new ArrayList<String>(kor);		//고정리스트를 변경할 수 있는 리스트 객체로 생성하기
 					w.setKoreans(kor);		//두번째 토큰을 리스트로 변환해서 koreans필드값으로 참조.
 					mywords.add(w);			//Words 객체를 mywords 리스트에 추가하기
 				}	//substring 메소드로 "]" 제외 : String temp =stk.nextToken(); temp.substring(0,temp-1).split(", ");
@@ -122,6 +133,8 @@ public class MyDictionaryApp { // 애플리케이션 클래스(main 메소드를
 			fsc.close();
 		} catch (FileNotFoundException e) {
 			System.out.println("없는 경로 또는 파일입니다.");
+		} catch (Exception e) {
+			System.out.println("잘못된 파일 형식입니다.기타 : " + e.getMessage());
 		}
 
 	}
