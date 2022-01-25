@@ -1,4 +1,4 @@
-package koreait.day18;
+package koreait.day19;
 
 import java.awt.FileDialog;
 import java.io.File;
@@ -11,13 +11,14 @@ import java.util.Scanner;
 import java.util.StringTokenizer;
 
 import javax.swing.JFrame;
-
-public class MyDictionaryApp { // 애플리케이션 클래스(main 메소드를 응용프로그램 실행을 시작합니다.)
+//EnglishKoreanNote클래스는 WordNote 인터페이스 규칙(추상메소드)을 따르고 그의 그룹이 됩니다.
+public class EnglishKoreanNote implements WordNote { //영한단어장
 	// 전역변수 선언.
-	private static Scanner sc = new Scanner(System.in);
-	private static List<Word> mywords = new ArrayList<>();		//단어들의 목록 (단어장)
+	private Scanner sc = new Scanner(System.in);
+	private List<Word> mywords = new ArrayList<>();		//단어들의 목록 (단어장)
 
-	public static void main(String[] args) {
+	//1.인스턴스 메소드
+	public void start() {
 		JFrame f = new JFrame();		//파일대화상자 사용을 위한 객체생성
 		FileDialog fd;
 		boolean run = true;
@@ -57,10 +58,10 @@ public class MyDictionaryApp { // 애플리케이션 클래스(main 메소드를
 		System.out.println(":::: 프로그램 종료합니다. ::::");
 	}// main end
 
-	//예시 : mywords 에 저장된 내용이  milk : 우유  , book : 책,예약하다 , car : 자동차   라고 할때
-	//     지금 입력된 eng는 book , kor은 예약하다 라고 한다면 기존에 저장된 단어일때 koreans 필드에 새로운 뜻의 kor만 요소로 추가한다.
 	
-	private static void wordAdd() { // 단어 추가
+	//2. WordNote 인터페이스의 추상메소드 4개를 구현했습니다.
+	
+	public void wordAdd() { // **추상메소드 public 이므로 구현 메소드도 public만 가능합니다.**
 		System.out.println("[새로운 단어 추가]입니다.");
 		do {
 			System.out.print("\nEnglish -> ");  String eng = sc.nextLine();
@@ -91,12 +92,12 @@ public class MyDictionaryApp { // 애플리케이션 클래스(main 메소드를
 		}while(sc.nextLine().equals("y"));
 	}
 
-	private static void wordList() { // 단어 목록
+	public void wordList() { // 단어 목록
 		for(Word w : mywords)
 			System.out.println(w);
 	}
 
-	private static void wordSave(String filename) { // 파일에 단어들을 저장합니다.(저장할 파일 경로와파일이름을 filename으로 전달)
+	public void wordSave(String filename) { // 파일에 단어들을 저장합니다.(저장할 파일 경로와파일이름을 filename으로 전달)
 			File file = new File(filename);
 			
 			try {
@@ -111,7 +112,7 @@ public class MyDictionaryApp { // 애플리케이션 클래스(main 메소드를
 			}
 	}
 
-	private static void wordRead(String filename) { // 파일에 저장된 단어들 읽어옵니다.
+	public void wordRead(String filename) { // 파일에 저장된 단어들 읽어옵니다.
 		File file = new File(filename);
 		
 		try {
