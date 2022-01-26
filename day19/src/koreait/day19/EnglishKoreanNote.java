@@ -11,11 +11,11 @@ import java.util.Scanner;
 import java.util.StringTokenizer;
 
 import javax.swing.JFrame;
-//EnglishKoreanNote클래스는 WordNote 인터페이스 규칙(추상메소드)을 따르고 그의 그룹이 됩니다.
+//EnglishKoreanNote클래스는 WordNote 인터페이스 규칙(추상메소드)을 따르고 그의 그룹이 됩니다.*
 public class EnglishKoreanNote implements WordNote { //영한단어장 클래스
 	// 전역변수 선언.
 	private Scanner sc = new Scanner(System.in);
-	private List<Word> mywords = new ArrayList<>();		//단어들의 목록 (단어장)
+	private List<Word> mywords = new ArrayList<>();		//단어들의 목록 (단어장) -> Map으로 구현할 수 있습니다.
 
 	//1.인스턴스 메소드 - 재정의 하였습니다.
 	public void start() {

@@ -12,7 +12,7 @@ import java.util.StringTokenizer;
 
 import javax.swing.JFrame;
 
-public class MyDictionaryApp { // 애플리케이션 클래스(main 메소드를 응용프로그램 실행을 시작합니다.)
+public class MyDictionaryApp { // 애플리케이션 클래스(main 메소드로 응용프로그램 실행을 시작합니다.)
 	// 전역변수 선언.
 	private static Scanner sc = new Scanner(System.in);
 	private static List<Word> mywords = new ArrayList<>();		//단어들의 목록 (단어장)
