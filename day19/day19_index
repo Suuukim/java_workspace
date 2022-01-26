@@ -20,3 +20,4 @@ day19 인덱스
 	Word.java -> english 필드는 직접 사용하지 않고 , Map 의 key로 대체합니다.
 	Map<String,Word>  : key는 String, Value 는 Word 타입니다.	
    
+ **** 자바 진도 끝입니다. 자바는 계속 복습이 필요합니다. ****  
