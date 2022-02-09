@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 //JDBC : Java DataBase Connection , 자바와 데이터베이스의 연결(연동) 방식을 제공합니다.
-//		ㄴ 라이브러리 추가 : 오라클일 때 , ojdbcxx.jar (라이브러리, 자바와 오라클 연동하기 위한 프로그램의 일종) 
+//		ㄴ 라이브러리 추가 : 오라클일 때 , ojdbc6.jar (라이브러리, 자바와 오라클 연동하기 위한 프로그램의 일종) 
 //		ㄴ 오라클 서버와 연결하기 위한 정보 (url ,port,user,password) 가 필요합니다. 
 public class JDBCConnectTest {		//연결 테스트용 프로그램
 
