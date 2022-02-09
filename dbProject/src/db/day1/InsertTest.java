@@ -20,7 +20,7 @@ public class InsertTest {		//오라클 idev 스키마 custom# 테이블에 고�
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 		
-			pstmt.execute();
+			pstmt.execute();		//sql 실행 메소드
 			pstmt.close();
 		}catch (SQLException e) {
 			System.out.println("SQL 실행 오류 : " + e.getMessage());
