@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class SelectTest3 {
 // select 쿼리를 조건식으로 조회하는 연습입니다. 조건컬럼 custom_id 이며 기본키 컬럼입니다.
-//      -> 조회결과는 0 또는 1 개입니
+//      -> 조회결과는 0 또는 1 개입니다.
 // 조건식 사용 컬럼이 기본키가 아닐때는 while 반복하며 카운트변수 사용합니다.
 	
 	public static void main(String[] args) {

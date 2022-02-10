@@ -17,7 +17,7 @@ public class InsertTest {		//오라클 idev 스키마 custom# 테이블에 고�
 	" VALUES(?, ?, ?, ?, sysdate)";  //값 부분에 ? -> 해당값은 execute전에 대입
 		
 		
-		//sql 을 실행할 객체 생성
+		//**sql 을 실행할 객체 생성 -> PreparedStatement 타입 변수로 참조하고 이것으로 sql 쿼리도 실행합니다.**
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 		
