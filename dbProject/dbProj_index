@@ -12,3 +12,7 @@ JDBC : dbProject 프로젝트 순서
 2. db.day2 패키지
 1) VOClassTest.java 	: db.vo패키지의 Custom 클래스를 이용하여 select 결과를 자바변수에 저장하기
 2) IDCheckInsert.java	: insert 쿼리의 기본키 제약조건을 검사 -> custom_id 중복검사 메소드 만들기
+3) SelectDistinct.java  : distinct 키워드사용하는  select 조회 -> 결과를 list에 저장
+			: 프로그램 실행중에 list를 이용할때에는 select 한 테이블의 내용 변경이 없을때 사용
+4) UpdateTest.java : update sql 실행
+5) DeleteTest.java : delete sql 실행						

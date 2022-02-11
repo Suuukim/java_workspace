@@ -3,12 +3,17 @@ package db.vo;
 import java.sql.Date;
 
 //VO : Value Object , 여러개의 데이터를 저장하는 것이 목적입니다.
+//     custom# 테이블의 컬럼을 저장할 필드로 구성된 클래스
 public class Custom {
 	private String custom_id;
 	private String name;
 	private String email;
 	private int age;
 	private Date reg_date;		//registration
+	//기본생성자 정의
+	public Custom() {
+		
+	}
 	
 	
 	//alt+shift+s 단축키 -> 커스텀 생성자, getter/setter, toString 을 자동으로 만들어 줍니다.
