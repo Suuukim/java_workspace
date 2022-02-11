@@ -12,6 +12,44 @@ import db.vo.Custom;
 
 public class CustomDao {
 	
+	// 필드값이 없는 클래스 입니다. ->  new 연산으로 객체를 생성했을때 서로 다른 필드값을 갖는 것이 없습니다.
+	// -> static 키워드로 실행 가능한 메소드 입니다.static 은 메모리의 공유영역입니다.
+	// -> jdbc에서 dao 클래스는 static으로 하지 않습니다.-> 싱글턴(singleton) 객체로 사용합니다.
+	
+	private static CustomDao customDao = new CustomDao(); 
+	private CustomDao() { }
+	public static CustomDao getCustomDao() {
+		return customDao;
+	}
+	
+	//select 쿼리 (기본키 컬럼으로 조회하고 결과 행 반환)
+	public static Custom selectOne(String custom_id) {
+		Connection conn = OracleConnectUtil.connect();
+		PreparedStatement pstmt = null;
+		String sql="select * from tbl_custom# where custom_id = ?";
+		//기본키컬럼 조회결과는 0 또는 1개 행입니다.
+		ResultSet rs = null;
+		Custom vo = null;
+		//?
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, custom_id);
+			rs=pstmt.executeQuery();
+			if(rs.next()) {		//조회 결과 1개 행 있으면
+				vo = new Custom();
+				vo.setCustom_id(rs.getString(1));
+				vo.setName(rs.getString(2));
+				vo.setEmail(rs.getString(3));
+				vo.setAge(rs.getInt(4));
+				vo.setReg_date(rs.getDate(5));
+			}  //없으면( else) null 반환
+		}catch(SQLException e) {
+			System.out.println("SQL 실행 오류 : " + e.getMessage());
+		}
+		
+		OracleConnectUtil.close(conn);
+		return vo;
+	}
 	
 	//insert 쿼리 실행
 	public void insert(Custom vo) {
@@ -94,34 +132,28 @@ public class CustomDao {
 		System.out.println("정상적으로 회원 탈퇴되었습니다.");
 		OracleConnectUtil.close(conn);
 	}
-	//select 쿼리 (기본키 컬럼으로 조회하고 결과 행 반환)
-	public Custom selectOne(String custom_id) {
+
+	
+	//selectOne() 메소드와 쿼리는 동일하지만 리턴형식이 다른 예시
+	public boolean idCheck(String id) {
 		Connection conn = OracleConnectUtil.connect();
-		PreparedStatement pstmt = null;
-		String sql="select * from tbl_custom# where custom_id = ?";
-		//기본키컬럼 조회결과는 0 또는 1개 행입니다.
+		boolean result = false;
 		ResultSet rs = null;
-		Custom vo = null;
-		//?
+		String sql="select * from tbl_custom# where custom_id=?";
 		try {
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, custom_id);
-			rs=pstmt.executeQuery();
-			if(rs.next()) {		//조회 결과 1개 행 있으면
-				vo = new Custom();
-				vo.setCustom_id(rs.getString(1));
-				vo.setName(rs.getString(2));
-				vo.setEmail(rs.getString(3));
-				vo.setAge(rs.getInt(4));
-				vo.setReg_date(rs.getDate(5));
-			}  //없으면( else) null 반환
-		}catch(SQLException e) {
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			if(!rs.next()) result = true;		//rs.next()==false
+			
+		}catch (SQLException e) {
 			System.out.println("SQL 실행 오류 : " + e.getMessage());
-		}
 		
-		OracleConnectUtil.close(conn);
-		return vo;
+		}
+		return result;	//중복되면 false, 중복없으면 true(rs.next()가 false일떄)
 	}
+	
+	
 	
 	//select 쿼리(조건 없음)
 	public List<Custom> selectAll() {

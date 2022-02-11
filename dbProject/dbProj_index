@@ -21,6 +21,17 @@ JDBC : dbProject 프로젝트 순서
 1) Data Access Object : DML 쿼리 실행하는 메소드가 모여있는 클래스
 			select 는 여러가지 목적으로 다양한 쿼리가 있으면 각각의 메소드를 만듭니다.
 2) dao 클래스는 싱글턴 패턴으로  만듭니다.
+참고 : 소프트웨어 디자인 패턴에서 싱글턴 패턴(Singleton pattern)을 따르는 클래스는, 
+**생성자가 여러 차례 호출되더라도 실제로 생성되는 객체는 하나**이고 최초 생성 이후에 
+호출된 생성자는 최초의 생성자가 생성한 객체를 리턴한다. 
+이와 같은 디자인 유형을 싱글턴 패턴이라고 한다. 
+주로 공통된 객체를 여러개 생성해서 사용하는 
+**DBCP(DataBase Connection Pool)와 같은 상황에서 많이 사용된다.**
+
+4. ProductDao 클래스 연습
+1) Product.java 를 db.vo 패키지에 만드세요.
+2) insert,update(상품이름,가격,카테고리) , delete , selectAll , selectOne
+   selectCategory 메소드 만드세요.
 
 
 
