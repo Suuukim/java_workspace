@@ -22,9 +22,10 @@ public class SaleByCustom {
 	
 	//toString 은 선택적으로 만들거나 또는 문자열 형태 변경해도 됩니다.
 	@Override
-	public String toString() {
-		return "[custno=" + custno + ", custname=" + custname + ", agrade=" + agrade + ", asum=" + asum
-				+ "]";
+	public String toString() {		//String.format()으로 출력형식 정하세요.
+//		return  custno + " " + custname + " " + agrade + " " + asum;
+	return String.format("%-10s%-10s%-10s\t%-10s",custno,custname,agrade,asum);	
+	//한글과 영문이 혼합되면 출력칸수가 생각되로 안됩니다.(예를들면, vip와 일반) 그럴때는 \t를 활용하세요.
 	}
 	
 	//
